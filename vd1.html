@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>HIển thị các thông tin trên console</h2>
+    <!-- script: đánh dấu đoạn code javascript -->
+    <script>
+        //khai báo thông tin sinh viên
+        const tenTruong = "FPT Polytechnic";//hang so
+        let hoTen = "Nguyen Van A";//bien so co the thay doi duoc
+        let tuoi = 21; //kieu so trong javascript
+        //int a=5;//trong C
+        //float a=5;//trong C
+        let isStudent=false; //kieu boolean, trong C khai bao la bool isStudent=fales;
+        //in ra console:
+        console.log("Truong: ",tenTruong);
+        console.log("Ho ten: ",hoTen);
+        console.log("Tuoi: ",tuoi);
+        console.log("Trang thai sinh vien: ",isStudent);
+        //kiem tra kieu du lieu bang lenh typeof
+        console.log("Kieu du lieu cua tuoi la: ",typeof(tuoi));
+        console.log("Kieu du lieu cua ho ten la: ",typeof hoTen);
+        //vi du ve if else
+        let diemKiemTra = 3.5;
+        if(diemKiemTra>=8.0){
+            console.log("Xep loai: Gioi-Xuat sac");
+        }
+        else if(diemKiemTra >=5.0){
+            console.log("Xep loai: kha - Dat yeu cau");
+        }
+        else {
+            console.log("Xep loai: Can co gang");
+        }
+        //Dinh nghia ham tinh tong cua 2 so bat ky
+        function tinhTong(a,b){
+            return a+b;
+        }
+        //Goi ham
+        let ketQua = tinhTong(15,25);
+        console.log("Ket qua goi ham tinh tong la: ",ketQua);
+        //dinh nghia ham
+        function chaoHoi(ten){
+            console.log("xin chao, "+ten+" . CHao mung ban den voi mon Lap trinh javascript");
+        }
+        chaoHoi("An");
+        //vong lap
+        //tao danh sach cac mon hoc
+        let danhSachMon = ["Lap trinh web","Co so du lieu","LAp trinh PHP"];
+        console.log("Danh sach cac mon hoc hien co");
+        //dung vong lap for de duyet qua tung phan tu trong mang
+        for(let i=0;i<danhSachMon.length;i++){
+            console.log("-"+danhSachMon[i]);
+        }
+    </script>
+</body>
+</html>
