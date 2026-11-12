@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tiền điện</title>
+</head>
+<body>
+    <h2>Bài 2 Tính tiền điện</h2>
+    <script src="bai2.js">
+         //  Nhập số điện đã sữ dụng
+         let soKwh = Number(prompt("Nhập số kWh đã sử dụng: "));
+          
+         let tienDien = 0;
+        
+         //Tính tiền điện
+         if (soKwh <=50) {
+            tienDien = soKwh *1800;
+         }
+         else if (soKwh <=100){
+             tienDien = 50 * 1800 + (soKwh - 50) * 2300;
+         }
+         else{
+            tienDien = 50 * 1800 + 50 * 2300 + (soKwh - 100) * 3000;
+         }
+          
+         alert("Tiền điện phải trả: "+tienDien + "đồng");
+    </script>
+</body>
+</html>

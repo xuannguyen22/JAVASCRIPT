@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính lương nhân vien</title>
+</head>
+<body>
+    <h3>Tính lương nhân viên</h3>
+    <script src="bai3.js">
+        //Nhập chức vuh
+        let chucVu = prompt("Nhập chức vụ(intern, staff, senior, manager):");
+
+        //Nhập ngày công
+        let ngayCong = Number(prompt("Nhập số ngày công:"));
+        let heSo = 0;
+        let luongCoBan = 5000000;
+        let ngayCongQuyDinh = 24;
+
+        //Xac dinh he so luong
+        if (chucVu == "intern"){
+            heso = 1.0;
+        }
+        else if (chucVu == "staff") {
+            heSo = 1.5;
+        }
+        else if (chucVu == "senior"){
+            heSo = 2.0;
+        }
+        else if (chucVu == "manager"){
+            heSo = 3.0;
+        }
+        else {
+            alert("Chức vụ không hợp lệ!");
+        }
+
+        //Tính lương
+        let luong = heSo * ngayCong *luongCoBan / ngayCongQuyDinh;
+
+        //Hiển thị kết quả ra man hình
+        alert("Lương nhân viên là: " + luong+ "đồng");
+    </script> 
+</body>
+</html>
+
+
+
+
+
+
+

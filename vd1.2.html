@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bai tap Javascript demo</h1>
+    <div class="box">
+        <h2>Kiem cha chan le</h2>
+        <button onclick="kiemTraChanLe()">Kiem tra chan le</button>
+        <pre id="out2">Click button de xem ket qua...</pre>
+    </div>
+    <script>
+        function kiemTraChanLe(){
+            //du lieu dau vao
+            let n=7; 
+            //kiem tra dieu kien
+            let kqChanLe = (n%2 === 0 ? `${n} la so chan` : `${n} la so le`);
+            //dien ket qua len the out2
+            document.getElementById("out2").innerText=kqChanLe;
+        }
+        function laSoNguyenTo(n){
+            //so nho hon hoac bang 1 khong phai la so nguyen ta
+            if(n<=1) return `${n} khong phai la so nguyen to`;
+            //kiem tra tu 2 cho den can bac 2 cua n
+            for(let i=2;i*i<=n;i++){
+                if(n%i===0){
+                    return `${n} khong phai la so nguyen to`;
+                }
+            }
+            return `${n} la so nguyen to`;
+        }
+        console.log(laSoNguyenTo(7));
+        //tim min max
+        const mang=[5,2,9,1,7,6];
+        const max = Math.max(...mang);
+        const min=Math.min(...mang);
+        console.log("Max: ",max); 
+        console.log("Min: ",min);
+        //cach 2: tim min max
+        function timMinMax(arr){
+            let min=arr[0];//gia su phan tu so 0 la phan tu nho nhat
+            let max=arr[0];
+            for(let i=1;i<arr.length;i++){
+                if(arr[i]<min) min = arr[i]; //neu phan tu nho hon min => no se la so nho nhat
+                if(arr[i]>max) max = arr[i];//neu phan tu lon hon max => no la phan tu lon nhat
+            }
+            return {min,max};
+        }
+        const mang1=[5,2,9,1,7,6,10,100,1000,-8];
+        console.log(timMinMax(mang1));
+    </script>
+</body>
+</html>
